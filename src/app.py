@@ -42,3 +42,9 @@ df_2['Cluster'] = kmeans.labels_
 
 # Convert cluster to categorical 
 df_2['Cluster'] = pd.Categorical(df_2.Cluster)
+
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+
+# get the predict : means which cluster it belongs to
+print('Predicted ] : \n', loaded_model.predict([[ 2.344766,  1.052548,  -1.327835], [ -0.044727,0.542225, 0.329279]])) 
