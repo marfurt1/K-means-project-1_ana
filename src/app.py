@@ -7,11 +7,13 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pickle
 
 from sklearn import decomposition
 from sklearn.metrics import silhouette_score
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+
 
 # Read data
 url='https://raw.githubusercontent.com/4GeeksAcademy/k-means-project-tutorial/main/housing.csv'
