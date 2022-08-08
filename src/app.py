@@ -46,6 +46,7 @@ df_2['Cluster'] = kmeans.labels_
 df_2['Cluster'] = pd.Categorical(df_2.Cluster)
 
 # load the model from disk
+filename = '../models/finalized_model.sav' #use absolute path
 loaded_model = pickle.load(open(filename, 'rb'))
 
 # get the predict : means which cluster it belongs to
